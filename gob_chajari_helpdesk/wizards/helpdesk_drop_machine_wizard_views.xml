@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <!-- Actions -->
+  <record id="helpdesk_drop_machine_wizard_action" model="ir.actions.act_window">
+    <field name="name">Dar de baja</field>
+    <field name="res_model">helpdesk.drop.machine.wizard</field>
+    <field name="view_mode">form</field>
+    <field name="target">new</field>
+    <field name="context">
+      {'default_machine_id': active_id}
+    </field>
+  </record>
+
+  <!-- Forms -->
+  <record id="helpdesk_drop_machine_wizard_from_view" model="ir.ui.view">
+    <field name="name">helpdesk.drop.machine.wizard.from.view</field>
+    <field name="model">helpdesk.drop.machine.wizard</field>
+    <field name="arch" type="xml">
+      <form string="Dar de baja">
+	<sheet>
+	  <div class="oe_title">
+	    <label for="machine_id" string="Equipo"/>
+	    <h1>
+	      <field name="machine_id" readonly="1"/>
+	    </h1>
+	  </div>
+	  <group>
+	    <field name="drop_reason_id"/>
+	  </group>
+	</sheet>
+	<footer>
+	  <button string="Dar de baja"
+		  name="action_confirm"
+		  type="object"
+		  class="btn-primary"/>
+	  <button string="Cancelar"
+		  special="cancel"
+		  class="btn-secondary"/>
+	</footer>
+      </form>
+    </field>
+  </record>
+</odoo>

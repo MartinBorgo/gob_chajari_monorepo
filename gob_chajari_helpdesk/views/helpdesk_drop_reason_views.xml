@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <!-- Actions -->
+  <record id="helpdesk_drop_reason_action" model="ir.actions.act_window">
+    <field name="name">Motivos de baja</field>
+    <field name="res_model">helpdesk.drop.reason</field>
+    <field name="view_mode">list</field>
+    <field name="help" type="html">
+      <p class="o_view_nocontent_empty_folder">
+	No existen motivos de baja cargados
+      </p>
+      <p>
+	Los motivos de baja son las rasones por las cuales se decide sacar
+	de funcionamiento un equipo
+      </p>
+    </field>
+  </record>
+
+  <!-- Lists -->
+  <record id="helpdesk_drop_reason_list_view" model="ir.ui.view">
+    <field name="name">helpdesk.drop.reason.list.view</field>
+    <field name="model">helpdesk.drop.reason</field>
+    <field name="arch" type="xml">
+      <list editable="top">
+	<field name="name"/>
+      </list>
+    </field>
+  </record>
+</odoo>

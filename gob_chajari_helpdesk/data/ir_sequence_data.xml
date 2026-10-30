@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <record id="helpdesk_issue_sequence" model="ir.sequence">
+    <field name="name">Issue</field>
+    <field name="code">helpdesk.issue</field>
+    <field name="prefix">PRO/</field>
+    <field name="padding">8</field>
+  </record>
+</odoo>

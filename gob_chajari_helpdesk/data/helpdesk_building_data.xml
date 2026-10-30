@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <record id="helpdesk_building_albergue_deportivo" model="helpdesk.building">
+    <field name="name">Albergue deportivo</field>
+  </record>
+
+  <record id="helpdesk_building_arco_entrada" model="helpdesk.building">
+    <field name="name">Arco de entrada</field>
+  </record>
+
+  <record id="helpdesk_building_area_industrial" model="helpdesk.building">
+    <field name="name">Área industrial</field>
+  </record>
+
+  <record id="helpdesk_building_biblioteca_cristina_clement" model="helpdesk.building">
+    <field name="name">Biblioteca - Cristina Clement</field>
+  </record>
+
+  <record id="helpdesk_building_camping" model="helpdesk.building">
+    <field name="name">Camping</field>
+  </record>
+
+  <record id="helpdesk_building_casa_historia_cultura" model="helpdesk.building">
+    <field name="name">Casa de la historia y la cultira</field>
+  </record>
+
+  <record id="helpdesk_building_casa_yrigoyen" model="helpdesk.building">
+    <field name="name">Casa Yrigoyen</field>
+  </record>
+
+  <record id="helpdesk_building_casa_salvarredy" model="helpdesk.building">
+    <field name="name">Casa Salvarredy</field>
+  </record>
+
+  <record id="helpdesk_building_cementerio" model="helpdesk.building">
+    <field name="name">Cementerio</field>
+  </record>
+
+  <record id="helpdesk_building_centro_cultural" model="helpdesk.building">
+    <field name="name">Centro cultural</field>
+  </record>
+
+  <record id="helpdesk_building_centro_dia_albert_sabin" model="helpdesk.building">
+    <field name="name">Centro de dia - Albert Sabin</field>
+  </record>
+
+  <record id="helpdesk_building_guarderia_ludico_expresivo" model="helpdesk.building">
+    <field name="name">Guardería - Ludico expresivo</field>
+  </record>
+
+  <record id="helpdesk_building_guarderia_nino_jesus" model="helpdesk.building">
+    <field name="name">Guardería - Niño Jesus</field>
+  </record>
+
+  <record id="helpdesk_building_guarderia_san_antonio" model="helpdesk.building">
+    <field name="name">Guardería - San Antonio</field>
+  </record>
+
+  <record id="helpdesk_building_centro_salud_1" model="helpdesk.building">
+    <field name="name">Centro de salud N°1</field>
+  </record>
+
+  <record id="helpdesk_building_centro_salud_2" model="helpdesk.building">
+    <field name="name">Centro de salud N°2</field>
+  </record>
+
+  <record id="helpdesk_building_centro_integrador_comunitario" model="helpdesk.building">
+    <field name="name">Centro integrador comunitario</field>
+  </record>
+
+  <record id="helpdesk_building_concejo_deriberante" model="helpdesk.building">
+    <field name="name">Concejo deriberante</field>
+  </record>
+
+  <record id="helpdesk_building_corralon" model="helpdesk.building">
+    <field name="name">Corralon</field>
+  </record>
+
+  <record id="helpdesk_building_escuela_sordos_hipoacusticos" model="helpdesk.building">
+    <field name="name">Escuala de sordos e hipoacústicos</field>
+  </record>
+
+  <record id="helpdesk_building_estacion_ferrocarril" model="helpdesk.building">
+    <field name="name">Estación del ferrocarril</field>
+  </record>
+
+  <record id="helpdesk_building_ex_correo" model="helpdesk.building">
+    <field name="name">Ex correo</field>
+  </record>
+
+  <record id="helpdesk_building_inspeccion_general" model="helpdesk.building">
+    <field name="name">Inspeccion general</field>
+  </record>
+
+  <record id="helpdesk_building_hogar_ancianos" model="helpdesk.building">
+    <field name="name">Hogar de ancianos</field>
+  </record>
+
+  <record id="helpdesk_building_palacio_municipal" model="helpdesk.building">
+    <field name="name">Palacio municipal</field>
+  </record>
+
+  <record id="helpdesk_building_museo_camila_quiroga" model="helpdesk.building">
+    <field name="name">Museo - Camila Quiroga</field>
+  </record>
+
+  <record id="helpdesk_building_museo_ivy_mara_ey" model="helpdesk.building">
+    <field name="name">Museo - Ivy Mara Ey</field>
+  </record>
+
+  <record id="helpdesk_building_obras_sanitarias" model="helpdesk.building">
+    <field name="name">Obras sanitarias</field>
+  </record>
+
+  <record id="helpdesk_building_parque_tambor_tacuari" model="helpdesk.building">
+    <field name="name">Parque - Tambor de Tacuarí</field>
+  </record>
+
+  <record id="helpdesk_building_playon_polideportivo" model="helpdesk.building">
+    <field name="name">Payón polideportivo</field>
+  </record>
+
+  <record id="helpdesk_building_planta_tratamiento_residuos" model="helpdesk.building">
+    <field name="name">Planta de tratamiento de residuos</field>
+  </record>
+
+  <record id="helpdesk_building_sala_evocativa_malvina" model="helpdesk.building">
+    <field name="name">Sala evocativa de malvinas</field>
+  </record>
+
+  <record id="helpdesk_building_termas" model="helpdesk.building">
+    <field name="name">Termas</field>
+  </record>
+
+  <record id="helpdesk_building_terminal" model="helpdesk.building">
+    <field name="name">Terminal de ómnibus</field>
+  </record>
+</odoo>

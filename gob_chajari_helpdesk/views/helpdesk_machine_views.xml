@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo> 
+  <!-- Actions -->
+  <record id="helpdesk_machine_generic_action" model="ir.actions.act_window">
+    <field name="name">Equipos</field>
+    <field name="res_model">helpdesk.machine</field>
+    <field name="view_mode">list,form</field>
+    <field name="help" type="html">
+      <p class="o_view_nocontent_empty_folder">
+	No existen equipos cargados en el sistema
+      </p>
+      <p>
+	Los equipos son cualquier tipo de dispositivo informatico que
+	recibe soporte por parte del equipo de mantenimiento. Esto incluye
+	a computadoras, tablets, impresoras entre otras.
+      </p>
+    </field>
+  </record>
+
+  <record id="helpdesk_machine_replace_action" model="ir.actions.act_window">
+    <field name="name">Reemplazo</field>
+    <field name="res_model">helpdesk.machine</field>
+    <field name="view_mode">form</field>
+    <field name="target">new</field>
+  </record>
+  
+  <!-- Forms -->
+  <record id="helpdesk_machine_form_view" model="ir.ui.view">
+    <field name="name">helpdesk.machine.form.view</field>
+    <field name="model">helpdesk.machine</field>
+    <field name="arch" type="xml">
+      <form string="Equipo">	
+	<header>
+	  <button string="Reemplazar"
+		  name="%(gob_chajari_helpdesk.helpdesk_machine_replace_action)d"
+		  type="action"
+		  groups="gob_chajari_helpdesk.group_helpdesk_admin"
+		  class="btn-primary" 
+		  context="{'default_building_id': building_id, 'default_department_id': department_id, 'default_type_id': type_id, 'replaced_machine_id': id}"
+		  invisible="state != 'in_use'"/>
+	  <button string="Dar de baja"
+		  name="%(gob_chajari_helpdesk.helpdesk_drop_machine_wizard_action)d"
+		  type="action"
+		  groups="gob_chajari_helpdesk.group_helpdesk_admin"
+		  class="btn-secondary"
+		  invisible="state != 'in_use'"/>
+  
+	  <field name="state" widget="statusbar"/>
+	</header>
+	<div class="alert alert-warning oe_edit_only" invisible="not drop_reason_id or state == 'in_use'">
+	  Este equipo fue dado de baja o reemplazado por el siguiente motivo:
+	  <field name="drop_reason_id"
+		 class="fw-bold text-primary"
+		 readonly="1"
+		 options="{'no_open': True}"/>
+	</div>
+	<sheet>
+	  <div class="oe_button_box" name="button_box">
+	    <button name="show_replacement_button_action"
+		    type="object"
+		    class="oe_stat_button"
+		    invisible="not replacement_id"
+		    icon="fa-exchange">
+	      <div class="o_stat_info">
+		<span>Reemplazo</span>
+	      </div>
+	    </button>
+	  </div>
+	  
+	  <div class="oe_title">
+	    <label for="name" string="Identificador"/>
+	    <h1>
+	      <field name="name" placeholder="Ej: PC000024"/>
+	    </h1>
+	  </div>
+	  <group name="general_data" string="Datos generales">
+	    <group> 
+	      <field name="adquisition_date"/>
+	      <field name="type_id" options="{'no_create': True}"/>
+	      <field name="has_technical_detail" invisible="1"/>
+	      <field name="brand_id" options="{'no_create': True}"/>
+	      <field name="model_id" options="{'no_create': True}"/>
+	    </group>
+	    <group>
+	      <field name="building_id"/>
+	      <field name="department_id"/>
+	    </group>
+	  </group>
+	  <group name="technical_data" invisible="not has_technical_detail">
+	    <group name="components_section" string="Componentes">
+	      <field name="processor"/>
+	      <field name="motherboard"/>
+	      <field name="ram"/>
+	      <field name="operative_system"/>
+	    </group>
+	    <group name="anydesk_section" string="Anydesk">
+	      <field name="anydesk_code"/>
+	      <field name="anydesk_pwd"/>
+	    </group>
+	    <group name="use_section" string="Utilización">
+	      <field name="share_files"/>
+	      <field name="file_server"/>
+	      <field name="ip_address"
+		     invisible="not share_files and not file_server"/>
+	    </group> 
+	  </group>
+	  <notebook>
+	    <page string="Problemas">
+	      <field name="issue_ids" readonly="1">
+		<list>
+		  <field name="name"/>
+		  <field name="date"/>
+		</list>
+	      </field>
+	    </page>
+	  </notebook>
+	</sheet>
+      </form>
+    </field>
+  </record>
+
+  <!-- Lists -->
+  <record id="helpdesk_machine_list_form" model="ir.ui.view">
+    <field name="name">helpdesk.machine.list.form</field>
+    <field name="model">helpdesk.machine</field>
+    <field name="arch" type="xml">
+      <list string="Equipos">
+	<field name="name"/>
+	<field name="adquisition_date"/>
+	<field name="type_id"/>
+	<field name="state" widget="badge"
+	       decoration-info="state == 'in_use'"
+	       decoration-danger="state == 'broken'"
+	       decoration-warning="state == 'replaced'"/>
+      </list>
+    </field>
+  </record>
+</odoo>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <record id="helpdesk_drop_reason_obsolete" model="helpdesk.drop.reason">
+    <field name="name">Obsolescencia</field>
+  </record>
+
+  <record id="helpdesk_drop_reason_unrepairable_damage" model="helpdesk.drop.reason">
+    <field name="name">Dañado irreparable</field>
+  </record>
+
+  <record id="helpdesk_drop_reason_expensive_repair" model="helpdesk.drop.reason">
+    <field name="name">Reparación costosa</field>
+  </record>
+</odoo>

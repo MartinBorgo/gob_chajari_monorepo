@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!-- Form view -->
+    <record id="edu_season_form_view" model="ir.ui.view">
+        <field name="name">edu.season.form</field>
+        <field name="model">edu.season</field>
+        <field name="arch" type="xml">
+            <form string="Ciclo lectivo">
+                <sheet>
+                    <div class="oe_title">
+                        <label for="name" string="Ciclo lectivo"/>
+                        <h1>
+                            <field name="name"/>
+                        </h1>
+                    </div>
+                    <notebook>
+                        <page string="Cursos impartidos">
+                            <field name="course_instance_ids" readonly="1">
+                                <list default_group_by="period">
+                                    <field name="name"/>
+				    <field name="period" column_invisible="True"/>
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- List view -->
+    <record id="edu_season_list_view" model="ir.ui.view">
+        <field name="name">edu.season.list</field>
+        <field name="model">edu.season</field>
+        <field name="arch" type="xml">
+            <list string="Ciclos lectivos">
+                <field name="name"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="edu_season_action" model="ir.actions.act_window">
+        <field name="name">Ciclos lectivos</field>
+        <field name="res_model">edu.season</field>
+        <field name="view_mode">list,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No existen ciclos lectivos cargados.
+            </p>
+        </field>
+    </record>
+</odoo>

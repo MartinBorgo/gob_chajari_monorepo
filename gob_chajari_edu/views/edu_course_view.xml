@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!-- Form view -->
+    <record id="edu_course_form_view" model="ir.ui.view">
+        <field name="name">edu.course.form</field>
+        <field name="model">edu.course</field>
+        <field name="arch" type="xml">
+            <form string="Curso">
+                <sheet>
+                    <div class="oe_title">
+                        <label for="name" string="Nombre del curso" />
+                        <h1>
+                            <field name="name" placeholder="Ej. Electricidad" />
+                        </h1>
+                    </div>
+                    <group id="root_group">
+                        <group id="course_data_group">
+                            <field name="teacher_ids" widget="many2many_tags" />
+                            <field name="student_limit" />
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Programa de contenidos">
+                            <field name="content" />
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- List view -->
+    <record id="edu_course_list_view" model="ir.ui.view">
+        <field name="name">edu.course.list</field>
+        <field name="model">edu.course</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name" />
+                <field name="teacher_ids" widget="many2many_tags"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="edu_course_action" model="ir.actions.act_window">
+        <field name="name">Cursos</field>
+        <field name="res_model">edu.course</field>
+        <field name="view_mode">list,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No existen cursos cargados.
+            </p>
+        </field>
+    </record>
+</odoo>

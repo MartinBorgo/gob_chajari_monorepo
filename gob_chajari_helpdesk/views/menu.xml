@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <menuitem
+      id="helpdesk_menu_root"
+      name="Soporte técnico"
+      sequence="1"/>
+
+  <menuitem
+      id="machine_menu"
+      name="Equipos"
+      parent="helpdesk_menu_root"
+      sequence="10"/>
+
+  <menuitem
+      id="helpdesk_config_menu"
+      name="Configuración"
+      parent="helpdesk_menu_root"
+      sequence="20"/>
+
+  <menuitem
+      id="machine_properties_section"
+      name="Propiedades de equipo"
+      parent="helpdesk_config_menu"
+      sequence="10"/>
+
+  <menuitem
+      id="machine_location_section"
+      name="Ubicaciones"
+      parent="helpdesk_config_menu"
+      sequence="20"/>
+
+  <menuitem
+      id="machine_menu_item"
+      name="Equipos"
+      action="helpdesk_machine_generic_action"
+      parent="machine_menu"
+      sequence="10"/>
+
+  <menuitem
+      id="issue_menu_item"
+      name="Problemas"
+      action="helpdesk_issue_action"
+      parent="machine_menu"
+      sequence="20"/>
+  
+  <menuitem
+      id="machine_type_menu_item"
+      name="Tipo de equipos"
+      action="helpdesk_machine_type_action"
+      parent="machine_properties_section"
+      sequence="10"/>
+
+  <menuitem
+      id="drop_reason_menu_item"
+      name="Motivos de baja"
+      action="helpdesk_drop_reason_action"
+      parent="machine_properties_section"
+      sequence="20"/>
+  
+  <menuitem
+      id="machine_brand_menu_item"
+      name="Marcas"
+      action="helpdesk_machine_brand_action"
+      parent="machine_properties_section"
+      sequence="30"/>
+
+  <menuitem
+      id="machine_brand_model_menu_item"
+      name="Modelos"
+      action="helpdesk_machine_brand_model_action"
+      parent="machine_properties_section"
+      sequence="40"/>
+
+  <menuitem
+      id="building_menu_item"
+      name="Edificios"
+      action="helpdesk_building_action"
+      parent="machine_location_section"
+      sequence="10"/>
+
+  <menuitem
+      id="department_menu_item"
+      name="Oficinas"
+      action="helpdesk_department_action"
+      parent="machine_location_section"
+      sequence="20"/>
+</odoo>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <!-- Lists -->
+  <record id="helpdesk_building_list_view" model="ir.ui.view">
+    <field name="name">helpdesk.building.list.view</field>
+    <field name="model">helpdesk.building</field>
+    <field name="arch" type="xml">
+      <list editable="top">
+	<field name="name"/>
+      </list>
+    </field>
+  </record>
+
+  <!-- Actions -->
+  <record id="helpdesk_building_action" model="ir.actions.act_window">
+    <field name="name">Edificios</field>
+    <field name="res_model">helpdesk.building</field>
+    <field name="view_mode">list</field>
+    <field name="help" type="html">
+      <p class="o_view_nocontent_empty_folder">
+	No existen edificios cargados
+      </p>
+      <p>
+	Los edificios son los lugares físicos donde se encuentran los
+	equipos. Cada edificio posee un conjunto de oficinas en los cuales
+	se inventarean los equipos.
+      </p>
+    </field>
+  </record>
+</odoo>

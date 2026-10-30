@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <!-- Lists -->
+  <record id="helpdesk_machine_brand_model_list_view" model="ir.ui.view">
+    <field name="name">helpdesk.machine.brand.model.list.view</field>
+    <field name="model">helpdesk.machine.brand.model</field>
+    <field name="arch" type="xml">
+      <list string="Modelos" editable="top">
+	<field name="brand_id"/>
+	<field name="name"/>
+      </list>
+    </field>
+  </record>
+
+  <!-- Search -->
+  <record id="helpdesk_machine_brand_model_search_vuew" model="ir.ui.view">
+    <field name="name">helpdesk.machine.brand.model.search.view</field>
+    <field name="model">helpdesk.machine.brand.model</field>
+    <field name="arch" type="xml">
+      <search>
+	<field name="name" string="Modelo"/>
+
+	<group>
+	  <filter name="groupby_brand" string="Marca" context="{'group_by': 'brand_id'}"/>
+	</group>
+      </search>
+    </field>
+  </record>
+  
+  <!-- Actions -->
+  <record id="helpdesk_machine_brand_model_action" model="ir.actions.act_window">
+    <field name="name">Modelos</field>
+    <field name="res_model">helpdesk.machine.brand.model</field>
+    <field name="view_mode">list</field>
+    <field name="help" type="html">
+      <p class="o_view_nocontent_empty_folder">
+	No existen modelos cargados en el sistema
+      </p>
+    </field>
+  </record>
+</odoo>

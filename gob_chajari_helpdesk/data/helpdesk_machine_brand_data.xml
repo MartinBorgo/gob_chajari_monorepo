@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <record id="helpdesk_machine_brand_tplink" model="helpdesk.machine.brand">
+    <field name="name">TP-Link</field>
+    <field name="type_ids" eval="[Command.set([ref('helpdesk_machine_type_switch'), ref('helpdesk_machine_type_router')])]"/>
+  </record>
+
+  <record id="helpdesk_machine_brand_mk" model="helpdesk.machine.brand">
+    <field name="name">Mikrotik</field>
+    <field name="type_ids" eval="[Command.set([ref('helpdesk_machine_type_switch'), ref('helpdesk_machine_type_router')])]"/>
+  </record>
+  
+  <record id="helpdesk_machine_brand_cudy" model="helpdesk.machine.brand">
+    <field name="name">Cudy</field>
+    <field name="type_ids" eval="[Command.set([ref('helpdesk_machine_type_switch'), ref('helpdesk_machine_type_router')])]"/>
+  </record>
+
+  <record id="helpdesk_machine_brand_brother" model="helpdesk.machine.brand">
+    <field name="name">Brother</field>
+    <field name="type_ids"
+	   eval="[Command.set([ref('helpdesk_machine_type_printer')])]"/>
+  </record>
+
+  <record id="helpdesk_machine_brand_hp" model="helpdesk.machine.brand">
+    <field name="name">HP</field>
+    <field name="type_ids"
+	   eval="[Command.set([ref('helpdesk_machine_type_laptop'), ref('helpdesk_machine_type_printer'), ref('helpdesk_machine_type_desktop')])]"/>
+  </record>
+
+  <record id="helpdesk_machine_brand_lenovo" model="helpdesk.machine.brand">
+    <field name="name">Lenovo</field>
+    <field name="type_ids"
+	   eval="[Command.set([ref('helpdesk_machine_type_laptop'), ref('helpdesk_machine_type_desktop')])]"/>
+  </record>
+
+  <record id="helpdesk_machine_brand_toshiba" model="helpdesk.machine.brand">
+    <field name="name">Toshiba</field>
+    <field name="type_ids"
+	   eval="[Command.set([ref('helpdesk_machine_type_printer')])]"/>
+  </record>
+
+  <record id="helpdesk_machine_brand_canon" model="helpdesk.machine.brand">
+    <field name="name">Canon</field>
+    <field name="type_ids"
+	   eval="[Command.set([ref('helpdesk_machine_type_printer')])]"/>
+  </record>
+
+  <record id="helpdesk_machine_brand_epson" model="helpdesk.machine.brand">
+    <field name="name">Epson</field>
+    <field name="type_ids"
+	   eval="[Command.set([ref('helpdesk_machine_type_printer')])]"/>
+  </record>
+
+  <record id="helpdesk_machine_brand_assembled" model="helpdesk.machine.brand">
+    <field name="name">Ensample personalizado</field>
+    <field name="type_ids" eval="[Command.set([ref('helpdesk_machine_type_desktop')])]"/>
+  </record>
+</odoo>

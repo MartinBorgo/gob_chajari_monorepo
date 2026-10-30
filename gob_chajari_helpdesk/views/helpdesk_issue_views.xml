@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <!-- Forms -->
+  <record id="helpdesk_issue_form_view" model="ir.ui.view">
+    <field name="name">helpdesk.issue.form.view</field>
+    <field name="model">helpdesk.issue</field>
+    <field name="arch" type="xml">
+      <form string="Problema">
+	<sheet>
+	  <div class="oe_title">
+	    <label for="name" string="Identificador"/>
+	    <h1>
+	      <field name="name" readonly="1"/>
+	    </h1>
+	  </div>
+	  <group>
+	    <group>
+	      <field name="date"/>
+	      <field name="machine_id"/>
+	    </group>
+	  </group>
+	  <notebook>
+	    <page string="Descripción">
+	      <field name="description"/>
+	    </page>
+	  </notebook>
+	</sheet>
+      </form>
+    </field>
+  </record>
+
+  <!-- Lists -->
+  <record id="helpdesk_issue_list_view" model="ir.ui.view">
+    <field name="name">helpdesk.issue.list.view</field>
+    <field name="model">helpdesk.issue</field>
+    <field name="arch" type="xml">
+      <list string="Problemas">
+	<field name="name"/>
+	<field name="date"/>
+	<field name="machine_id"/>
+      </list>
+    </field>
+  </record>
+
+  <!-- Actions -->
+  <record id="helpdesk_issue_action" model="ir.actions.act_window">
+    <field name="name">Problemas</field>
+    <field name="res_model">helpdesk.issue</field>
+    <field name="view_mode">list,form</field>
+    <field name="help" type="html">
+      <p class="o_view_nocontent_empty_folder">
+	No existen problemas cargados
+      </p>
+    </field>
+  </record>
+</odoo>
