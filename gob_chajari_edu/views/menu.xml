@@ -32,7 +32,7 @@
 	name="Ajustes"
 	parent="edu_root_menu"
 	sequence="40"
-	groups="edu.group_edu_manager"
+	groups="gob_chajari_edu.group_edu_manager"
     />
     <!-- Menu items -->
     <menuitem
