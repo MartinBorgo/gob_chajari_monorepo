@@ -14,22 +14,22 @@
 	      class="btn-primary"
 	      invisible="state == 'done'"
 	      icon="fa-graduation-cap"
-	      groups="edu.group_edu_manager"/>
+	      groups="gob_chajari_edu.group_edu_manager"/>
 	  <button
               string="Registrar clase"
-              name="%(edu.edu_attendance_wizard_action)d"
+              name="%(gob_chajari_edu.edu_attendance_wizard_action)d"
               type="action"
               class="btn-secundary"
 	      invisible="state == 'done'"
 	      icon="fa-book"/> 
 	  <button
               string="Crear comisión"
-              name="%(edu.edu_commission_wizard_action)d"
+              name="%(gob_chajari_edu.edu_commission_wizard_action)d"
               type="action"
               class="btn-secundary"
 	      invisible="state == 'done'"
 	      icon="fa-users"
-              groups="edu.group_edu_manager"/>
+              groups="gob_chajari_edu.group_edu_manager"/>
 	  
           <field name="state" widget="statusbar"/>
 	</header>
