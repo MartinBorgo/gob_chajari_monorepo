@@ -48,7 +48,7 @@
         parent="settings_menu"
         action="edu_course_instance_form_action"
         sequence="20"
-        groups="edu.group_edu_manager"
+        groups="gob_chajari_edu.group_edu_manager"
     />
     <menuitem
         id="course_instance_general_item"
@@ -56,7 +56,7 @@
         parent="settings_menu"
         action="edu_course_instance_general_action"
         sequence="30"
-        groups="edu.group_edu_manager"
+        groups="gob_chajari_edu.group_edu_manager"
     />
     <menuitem
         id="teacher_courses_item"
